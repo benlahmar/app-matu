@@ -1,0 +1,39 @@
+<div class="ion-padding">
+  <ion-list *ngIf="users; else skeleton">
+    <ion-item *ngFor="let user of users">
+      <ion-thumbnail slot="start">
+        <img src="https://matu-assurance.ma/wp-content/uploads/Sans-titre-20-5.png" />
+      </ion-thumbnail>
+      <ion-label>
+        <h3>Name: {{ user.name }}</h3>
+        <p>Age: {{ user.username }}</p>
+        <p>Company: {{ user.phone }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ng-template #skeleton>
+    <ion-list>
+      <ion-item *ngFor="let item of [1, 2, 3, 4, 5]">
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-avatar slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ng-template>
+
+</div>
