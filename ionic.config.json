@@ -1,0 +1,7 @@
+{
+  "name": "app-matu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
