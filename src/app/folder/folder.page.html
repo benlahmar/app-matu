@@ -14,7 +14,9 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-  <app-listuser></app-listuser>  
+  <div >
+    <div  *ngIf="folder=='users'">
+        <app-listuser></app-listuser>  
+    </div>
   </div>
 </ion-content>

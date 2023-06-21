@@ -1,15 +1,12 @@
-<div class="ion-padding">
+<ion-content [fullscreen]="true">
+<div class="mypadding">
+  <ion-searchbar animated="true" placeholder="Animated"></ion-searchbar>
+
   <ion-list *ngIf="users; else skeleton">
-    <ion-item *ngFor="let user of users">
-      <ion-thumbnail slot="start">
-        <img src="https://matu-assurance.ma/wp-content/uploads/Sans-titre-20-5.png" />
-      </ion-thumbnail>
-      <ion-label>
-        <h3>Name: {{ user.name }}</h3>
-        <p>Age: {{ user.username }}</p>
-        <p>Company: {{ user.phone }}</p>
-      </ion-label>
-    </ion-item>
+    <div *ngFor="let u of users">
+      <app-user [user]="u"></app-user>
+    </div>
+    
   </ion-list>
 
   <ng-template #skeleton>
@@ -37,3 +34,4 @@
   </ng-template>
 
 </div>
+</ion-content>

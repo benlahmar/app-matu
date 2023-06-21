@@ -1,3 +1,14 @@
-<p>
-  user works!
-</p>
+<ion-item >
+  <ion-thumbnail slot="start">
+    <img src="https://matu-assurance.ma/wp-content/uploads/Sans-titre-20-5.png" />
+  </ion-thumbnail>
+  <ion-label>
+    <h3>Name: {{ user.name }}</h3>
+    <p>Age: {{ user.username }}</p>
+    <p>Company: {{ user.phone }}</p>
+
+  </ion-label>
+  <ion-button slot="end">
+    <ion-icon slot="icon-only" name="star"></ion-icon>
+  </ion-button>
+</ion-item>
