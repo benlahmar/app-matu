@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { UserComponent } from './components/user/user.component';
 import { ListuserComponent } from './components/listuser/listuser.component';
+import { UserPipe } from './pipes/user.pipe';
 
 @NgModule({
   declarations: [AppComponent],

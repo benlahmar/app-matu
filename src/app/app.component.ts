@@ -10,7 +10,7 @@ export class AppComponent {
     { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
     { title: 'Users', url: '/folder/users', icon: 'people' },
     { title: 'Post', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
+    { title: 'camera', url: '/folder/camera', icon: 'camera' },
     { title: 'Spam', url: '/folder/spam', icon: 'warning' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];

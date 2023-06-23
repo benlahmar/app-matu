@@ -1,9 +1,11 @@
 <ion-content [fullscreen]="true">
 <div class="mypadding">
-  <ion-searchbar animated="true" placeholder="Animated"></ion-searchbar>
-
+  <ion-searchbar  (ionInput)="filtre($event)" animated="true" placeholder="search"></ion-searchbar>
+<!--
+  <input type="text" [(ngModel)]="a" name="ff"/>{{a}}
+-->
   <ion-list *ngIf="users; else skeleton">
-    <div *ngFor="let u of users">
+    <div *ngFor="let u of data  ">
       <app-user [user]="u"></app-user>
     </div>
     

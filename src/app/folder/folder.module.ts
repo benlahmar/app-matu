@@ -9,6 +9,8 @@ import { FolderPageRoutingModule } from './folder-routing.module';
 import { FolderPage } from './folder.page';
 import { ListuserComponent } from '../components/listuser/listuser.component';
 import { UserComponent } from '../components/user/user.component';
+import { UserPipe } from '../pipes/user.pipe';
+import { CamComponent } from '../components/cam/cam.component';
 
 @NgModule({
   imports: [
@@ -17,6 +19,6 @@ import { UserComponent } from '../components/user/user.component';
     IonicModule,
     FolderPageRoutingModule
   ],
-  declarations: [FolderPage,ListuserComponent,UserComponent]
+  declarations: [FolderPage,ListuserComponent,UserComponent,UserPipe,CamComponent]
 })
 export class FolderPageModule {}

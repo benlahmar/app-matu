@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <ion-title>{{ folder | uppercase }}-{{date | date:'Y-M-d'}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,5 +18,9 @@
     <div  *ngIf="folder=='users'">
         <app-listuser></app-listuser>  
     </div>
+    <div  *ngIf="folder=='camera'">
+      <app-cam></app-cam>  
+  </div>
+
   </div>
 </ion-content>

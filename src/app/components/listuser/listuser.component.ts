@@ -10,14 +10,29 @@ import { UserService } from 'src/app/services/user.service';
 export class ListuserComponent  implements OnInit {
 
   users:IUser[];
-  users1:any
+  data:IUser[]
+  users1:any;
+  a:any
   constructor(private service:UserService) { }
 
   ngOnInit() {
     this.service.getusers().subscribe(d => {
       console.log(d);
       this.users=d;
+      this.data=d
+      localStorage.setItem('data',JSON.stringify(d));
+     
     })
+  }
+
+  filtre(event:any)
+  {
+    
+    let v= event.target.value.toLowerCase();
+    console.log(v)
+    
+    this.data= this.users.filter(x=> x.name.toLowerCase().indexOf(v) > -1 || x.username.toLowerCase().indexOf(v)>-1);
+    console.log(this.users)
   }
 
 }

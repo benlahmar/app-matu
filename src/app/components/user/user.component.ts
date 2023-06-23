@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IUser } from 'src/app/models/iuser';
 
 @Component({
@@ -10,8 +11,12 @@ export class UserComponent  implements OnInit {
 
   @Input()
   user:IUser
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {}
 
+  navigate(id:number)
+  {
+    this.router.navigateByUrl('detailsuser/'+id)
+  }
 }
